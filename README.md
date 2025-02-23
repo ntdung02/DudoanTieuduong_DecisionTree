@@ -181,7 +181,7 @@ Ta có thể loại bỏ bằng câu lệnh sau sau:
 
 4.	Chia tập dữ liệu thành tập huấn luyện và tập kiểm tra. Điều này giúp đảm bảo rằng cây quyết định được xây dựng trên tập huấn luyện và được đánh giá trên tập kiểm tra để đánh giá độ chính xác
 
-   ![image](https://github.com/user-attachments/assets/2eaad6c4-6fba-41c1-a136-d6b95e3b6880)
+![image](https://github.com/user-attachments/assets/c741a0b8-45fb-4c26-9fb5-d7a2a81d2cd5)
 
 ### 4.2 Xây dựng cây quyết định
 
