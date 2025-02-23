@@ -1,0 +1,130 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     diabetes-weka.filters.unsupervised.attribute.ReplaceMissingValues
+Instances:    768
+Attributes:   9
+              preg
+              plas
+              pres
+              skin
+              insu
+              mass
+              pedi
+              age
+              KetLuan
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+J48 pruned tree
+------------------
+
+plas <= 127
+|   mass <= 26.4: TieuDuong_CanAnKieng (132.0/3.0)
+|   mass > 26.4
+|   |   age <= 28: TieuDuong_CanAnKieng (180.0/22.0)
+|   |   age > 28
+|   |   |   plas <= 99: TieuDuong_CanAnKieng (55.0/10.0)
+|   |   |   plas > 99
+|   |   |   |   pedi <= 0.56: TieuDuong_CanAnKieng (84.0/34.0)
+|   |   |   |   pedi > 0.56
+|   |   |   |   |   preg <= 6
+|   |   |   |   |   |   age <= 30: KhoeManh_KhongKieng (4.0)
+|   |   |   |   |   |   age > 30
+|   |   |   |   |   |   |   age <= 34: TieuDuong_CanAnKieng (7.0/1.0)
+|   |   |   |   |   |   |   age > 34
+|   |   |   |   |   |   |   |   mass <= 33.1: KhoeManh_KhongKieng (6.0)
+|   |   |   |   |   |   |   |   mass > 33.1: TieuDuong_CanAnKieng (4.0/1.0)
+|   |   |   |   |   preg > 6: KhoeManh_KhongKieng (13.0)
+plas > 127
+|   mass <= 29.9
+|   |   plas <= 145: TieuDuong_CanAnKieng (41.0/6.0)
+|   |   plas > 145
+|   |   |   age <= 25: TieuDuong_CanAnKieng (4.0)
+|   |   |   age > 25
+|   |   |   |   age <= 61
+|   |   |   |   |   mass <= 27.1: KhoeManh_KhongKieng (12.0/1.0)
+|   |   |   |   |   mass > 27.1
+|   |   |   |   |   |   pres <= 82
+|   |   |   |   |   |   |   pedi <= 0.396: KhoeManh_KhongKieng (8.0/1.0)
+|   |   |   |   |   |   |   pedi > 0.396: TieuDuong_CanAnKieng (3.0)
+|   |   |   |   |   |   pres > 82: TieuDuong_CanAnKieng (4.0)
+|   |   |   |   age > 61: TieuDuong_CanAnKieng (4.0)
+|   mass > 29.9
+|   |   plas <= 157
+|   |   |   pres <= 61: KhoeManh_KhongKieng (15.0/1.0)
+|   |   |   pres > 61
+|   |   |   |   age <= 30: TieuDuong_CanAnKieng (40.0/13.0)
+|   |   |   |   age > 30: KhoeManh_KhongKieng (60.0/17.0)
+|   |   plas > 157: KhoeManh_KhongKieng (92.0/12.0)
+
+Number of Leaves  : 	20
+
+Size of the tree : 	39
+
+Attribute mappings:
+
+Model attributes   	    Incoming attributes
+-------------------	    ----------------
+(numeric) preg     	--> 1 (numeric) preg
+(numeric) plas     	--> 2 (numeric) plas
+(numeric) pres     	--> 3 (numeric) pres
+(numeric) skin     	--> 4 (numeric) skin
+(numeric) insu     	--> 5 (numeric) insu
+(numeric) mass     	--> 6 (numeric) mass
+(numeric) pedi     	--> 7 (numeric) pedi
+(numeric) age      	--> 8 (numeric) age
+(nominal) KetLuan  	--> 9 (nominal) KetLuan
+
+
+Time taken to build model: 0.06 seconds
+
+=== Predictions on test set ===
+
+    inst#     actual  predicted error prediction
+        1        1:? 2:TieuDuong_CanAnKieng       0.595 
+        2        1:? 2:TieuDuong_CanAnKieng       0.878 
+        3        1:? 2:TieuDuong_CanAnKieng       0.818 
+        4        1:? 1:KhoeManh_KhongKieng       0.87 
+        5        1:? 2:TieuDuong_CanAnKieng       0.595 
+        6        1:? 1:KhoeManh_KhongKieng       0.717 
+        7        1:? 2:TieuDuong_CanAnKieng       0.595 
+        8        1:? 1:KhoeManh_KhongKieng       0.717 
+        9        1:? 2:TieuDuong_CanAnKieng       0.977 
+       10        1:? 2:TieuDuong_CanAnKieng       0.854 
+       11        1:? 2:TieuDuong_CanAnKieng       0.595 
+       12        1:? 2:TieuDuong_CanAnKieng       0.595 
+       13        1:? 1:KhoeManh_KhongKieng       0.87 
+       14        1:? 2:TieuDuong_CanAnKieng       0.977 
+       15        1:? 2:TieuDuong_CanAnKieng       0.977 
+       16        1:? 2:TieuDuong_CanAnKieng       0.595 
+       17        1:? 2:TieuDuong_CanAnKieng       0.977 
+       18        1:? 1:KhoeManh_KhongKieng       0.717 
+       19        1:? 1:KhoeManh_KhongKieng       1 
+       20        1:? 2:TieuDuong_CanAnKieng       0.878 
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.02 seconds
+
+=== Summary ===
+
+Total Number of Instances                0     
+Ignored Class Unknown Instances                 20     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 ?        ?        ?          ?        ?          ?        ?         ?         KhoeManh_KhongKieng
+                 ?        ?        ?          ?        ?          ?        ?         ?         TieuDuong_CanAnKieng
+Weighted Avg.    ?        ?        ?          ?        ?          ?        ?         ?         
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 0 0 | a = KhoeManh_KhongKieng
+ 0 0 | b = TieuDuong_CanAnKieng
+
